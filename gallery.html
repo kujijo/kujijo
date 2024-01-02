@@ -3,6 +3,7 @@
 <head>
 <title>Gallery</title>
 <style>
+  
 body {
   font-family:sans-serif;
   width:95%;
@@ -16,6 +17,11 @@ body {
   flex-wrap: wrap;
   gap:15px;
 }
+
+img {
+  width:100%;
+}
+  
 </style>
 </head>
 <body>
@@ -33,10 +39,12 @@ function show(){
   const cont = document.getElementById('container');
   cont.innerHTML = '';
   urls.forEach(item => {
-    const img = document.createElement('img');
-    img.src = item;
-    img.alt = 'not found';
-    cont.appendChild(img);
+    if(item != ''){
+      const img = document.createElement('img');
+      img.src = item;
+      img.alt = 'not found';
+      cont.appendChild(img);
+    }
   });
 }
 </script>
