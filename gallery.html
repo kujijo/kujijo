@@ -39,12 +39,10 @@ function show(){
   const cont = document.getElementById('container');
   cont.innerHTML = '';
   urls.forEach(item => {
-    if(item != ''){
-      const img = document.createElement('img');
-      img.src = item;
-      img.alt = 'not found';
-      cont.appendChild(img);
-    }
+   const img = document.createElement('img');
+   img.src = item;
+   img.alt = 'not found';
+   cont.appendChild(img);
   });
 }
 </script>
